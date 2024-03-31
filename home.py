@@ -88,6 +88,7 @@ class Home:
 if __name__ == '__main__':
     home = Home()
     url_list = [
+        'https://www.xiaohongshu.com/user/profile/60770a42000000000100943c',
         'https://www.xiaohongshu.com/user/profile/6185ce66000000001000705b',
         'https://www.xiaohongshu.com/user/profile/6034d6f20000000001006fbb',
     ]

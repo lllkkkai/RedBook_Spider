@@ -4,6 +4,7 @@ import sys
 import time
 import execjs
 import requests
+import csv
 from pojo.note import Note_Detail
 from pojo.user import User_Detail
 
@@ -112,19 +113,27 @@ def save_user_detail(path, user):
         f.write(f'标签: {user.tags}\n')
 
 def save_note_detail(path, note):
-    with open(path + '/' + 'detail.txt', mode="w", encoding="utf-8") as f:
+    # with open(path + '/' + 'detail.csv', 'a', newline='', encoding = 'utf-8') as csvfile:
+    #     # 逐行输出到txt里
+    #     f = csv.writer(csvfile)
+    #     # f.writerow(['链接','类型','标题','点赞','收藏','评论','分享','上传时间','标签','IP归属地'])
+    #     f.writerow([note.note_id,note.note_type,note.title,note.liked_count,note.collected_count,note.comment_count,note.share_count,timestamp_to_str(note.upload_time),note.tag_list,note.ip_location])
+
+    with open(path + '/' + 'desc.txt','a', encoding='utf-8') as f:
         # 逐行输出到txt里
-        f.write(f"笔记url: {f'https://www.xiaohongshu.com/explore/{note.note_id}'}\n")
-        f.write(f'笔记类型: {note.note_type}\n')
-        f.write(f"笔记标题: {note.title}\n")
-        f.write(f"笔记描述: {note.desc}\n")
-        f.write(f"笔记点赞数量: {note.liked_count}\n")
-        f.write(f"笔记收藏数量: {note.collected_count}\n")
-        f.write(f"笔记评论数量: {note.comment_count}\n")
-        f.write(f"笔记分享数量: {note.share_count}\n")
-        f.write(f"笔记上传时间: {timestamp_to_str(note.upload_time)}\n")
-        f.write(f"笔记标签: {note.tag_list}\n")
-        f.write(f"笔记ip归属地: {note.ip_location}\n")
+        # f = csv.writer(csvfile)
+        # f.writerow(['链接','类型','标题','点赞','收藏','评论','分享','上传时间','标签','IP归属地'])
+        # f.writerow([note.note_id,note.note_type,note.title,note.liked_count,note.collected_count,note.comment_count,note.share_count,timestamp_to_str(note.upload_time),note.tag_list,note.ip_location])
+        # f.write(f"笔记类型: {note.note_type}\n")
+        f.write(f"{note.title}\n")
+        f.write(f"{note.desc}\n")
+        # f.write(f"笔记点赞数量: {note.liked_count}\n")
+        # f.write(f"笔记收藏数量: {note.collected_count}\n")
+        # f.write(f"笔记评论数量: {note.comment_count}\n")
+        # f.write(f"笔记分享数量: {note.share_count}\n")
+        # f.write(f"笔记上传时间: {timestamp_to_str(note.upload_time)}\n")
+        # f.write(f"笔记标签: {note.tag_list}\n")
+        # f.write(f"笔记ip归属地: {note.ip_location}\n")
 
 def handle_note_info(data):
     note_id = data['id']
