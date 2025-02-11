@@ -1,6 +1,15 @@
 # 🎀Spider_XHS
 
-**联系作者获取小红书其他Api、小红书专业号Api、小红书千帆Api、小红书蒲公英Api，定制需求**
+### 功能列表
+![image](https://github.com/user-attachments/assets/54c45c9d-294f-4a05-b74a-c78c7f02a180)
+
+
+
+**最新signSvn56 AES | xs xt xscommom x-b3-traceid x-xray-traceid sign a1 qsignature源码**
+
+**联系作者 全部协议接口、小红书pc、小红书创作者、小红书专业号、小红书千帆、小红书蒲公英，定制需求**
+
+**小红书exe程序, 网页程序定制**
 
 小红书个人主页无水印图片、无水印视频、个人信息和搜索爬取。
 
@@ -44,7 +53,6 @@ python search.py
 | 23/10/17 | - 搜索下载新增排序方式选项（1、综合排序 2、热门排序 3、最新排序）。|
 | 23/10/21 | - 新增图形化界面,上传至release v2.1.0。|
 | 23/10/28 | - Fix Bug 修复搜索功能出现的隐藏问题。|
-
 
 ## 🧸注意事项
 **本项目仅供学习与交流，侵权必删**
