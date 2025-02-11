@@ -1,5 +1,7 @@
 import json
 import re
+
+import jieba
 import requests
 from one import OneNote
 from xhs_utils.xhs_util import get_headers, get_search_data, get_params, js, check_cookies
@@ -82,9 +84,9 @@ class Search:
 if __name__ == '__main__':
     search = Search()
     # 搜索的关键词 
-    query = '亚运会'
+    query = '蓝眼泪'
     # 搜索的数量（前多少个）
-    number = 2222
+    number = 1000
     # 排序方式 general: 综合排序 popularity_descending: 热门排序 time_descending: 最新排序
     sort = 'general'
     info = {
